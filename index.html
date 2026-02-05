@@ -15,18 +15,30 @@ body{
 /* ===== HEADER ===== */
 header{
     background:#000;
-    padding:25px 15px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
+    padding:35px 15px;
+    position:relative;
+    text-align:center;
 }
 
-/* Logo + Company Name */
-.header-left{
-    display:flex;
-    align-items:center;
-    gap:18px;
+/* HOME BUTTON LEFT SIDE */
+.home-btn{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    background:#25d366;
+    color:#000;
+    padding:8px 14px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+}
+
+/* HEADER CENTER: LOGO + COMPANY NAME */
+.header-center{
+    display:inline-block;
+    text-align:center;
 }
 .logo{
     width:70px;
@@ -35,11 +47,10 @@ header{
     background:#fff;
     padding:5px;
 }
-.company-text{
-    line-height:1.1;
-}
+
+/* COMPANY NAME */
 .bhairav-text{
-    font-family: Copperplate, "Copperplate Gothic", serif;
+    font-family: "Copperplate", "Copperplate Gothic", serif;
     font-size:72px;
     font-weight:700;
     background: linear-gradient(to bottom,#3a3a3a,#cfcfcf);
@@ -70,14 +81,16 @@ header{
     color:#fff;
 }
 
-/* Navigation Menu */
+/* NAVIGATION MENU */
 .nav-menu{
+    margin-top:10px;
     display:flex;
+    justify-content:center;
     gap:20px;
 }
 .nav-menu a{
     text-decoration:none;
-    color:#25d366;
+    color:lightblue;
     font-weight:bold;
     font-size:16px;
     padding:8px 12px;
@@ -85,10 +98,10 @@ header{
     transition:0.3s;
 }
 .nav-menu a:hover{
-    background:#25d366;
+    background:lightblue;
     color:#000;
 }
-    
+
 /* ===== SECTIONS ===== */
 section{
     padding:50px 15px;
@@ -212,9 +225,13 @@ footer a{
 
 <body>
 
-<!-- ===== HEADER (Updated with Navigation) ===== -->
+<!-- ===== HEADER ===== -->
 <header>
-    <div class="header-left">
+    <!-- HOME BUTTON LEFT -->
+    <a href="index.html" class="home-btn">🏠 Home</a>
+
+    <!-- CENTER LOGO + COMPANY NAME -->
+    <div class="header-center">
         <img src="logo.png" class="logo">
         <div class="company-text">
             <div class="bhairav-text">
@@ -222,13 +239,12 @@ footer a{
             </div>
             <div class="security-text">SECURITY SERVICES</div>
         </div>
+        <!-- NAV MENU -->
+        <nav class="nav-menu">
+            <a href="about.html">About</a>
+            <a href="#services">Services</a>
+        </nav>
     </div>
-    <!-- Navigation Menu -->
-    <nav class="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="#services">Services</a>
-    </nav>
 </header>
 
 <section id="services">
