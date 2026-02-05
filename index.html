@@ -7,222 +7,185 @@
 
 <style>
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#0b1d2d;
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#0f3b4f;
+  color:white;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
-    background:#000;
-    padding:35px 15px;
-}
-.header-box{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:18px;
-}
-.logo{
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    background:#fff;
-    padding:5px;
+  background:#000;
+  padding:30px 10px;
+  text-align:center;
 }
 
-/* ===== COMPANY NAME ===== */
-.company-text{
-    line-height:1.1;
+.brand-name{
+  font-family: Copperplate, "Copperplate Gothic Light", serif;
+  font-size:64px;
+  font-weight:700;
+  background: linear-gradient(to bottom, #8e8e8e, #ffffff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin:0;
 }
 
-/* Bhairav Copperplate + dark to light grey gradient */
-.bhairav{
-    font-family: "Copperplate", "Copperplate Gothic", serif;
-    font-size:56px;
-    font-weight:700;
-    background:linear-gradient(to bottom,#5f5f5f,#e0e0e0);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+.brand-name .i-wrap{
+  position:relative;
+  display:inline-block;
 }
 
-/* i visible + dark red dot */
-.i-letter{
-    position:relative;
-    display:inline-block;
-}
-.i-letter::after{
-    content:'';
-    position:absolute;
-    top:-9px;
-    left:50%;
-    transform:translateX(-50%);
-    width:7px;
-    height:7px;
-    background:#8b0000;
-    border-radius:50%;
+.brand-name .i-dot{
+  position:absolute;
+  top:-10px;
+  left:6px;
+  color:darkred;
+  font-size:24px;
 }
 
-.security{
-    margin-top:6px;
-    font-size:20px;
-    font-weight:bold;
-    color:#fff;
+.brand-sub{
+  margin-top:-10px;
+  letter-spacing:3px;
+  font-size:18px;
 }
 
-/* ===== SECTIONS ===== */
-section{
-    padding:50px 15px;
-}
-h2{
-    text-align:center;
-    color:#fff;
-    margin-bottom:35px;
-}
-
-/* ===== SERVICE CARDS ===== */
+/* SERVICES */
 .services{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:22px;
+  padding:40px 20px;
+  text-align:center;
+}
+
+.services h2{
+  margin-bottom:30px;
+}
+
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
 }
 
 .card{
-    width:230px;
-    background:#ff8c00;
-    color:#fff;
-    font-weight:bold;
-    padding:28px 20px;
-    border-radius:16px;
-    text-align:center;
-    box-shadow:0 6px 14px rgba(0,0,0,0.35);
-    opacity:0;
-    transform:scale(0.92);
-    animation:cardIn 0.7s ease forwards;
-    cursor:pointer;
+  background:orange;
+  color:white;
+  padding:20px 30px;
+  border-radius:30px;
+  font-weight:bold;
+  min-width:220px;
+  animation: pop 0.8s ease forwards;
 }
 
-.card:nth-child(1){animation-delay:.1s}
-.card:nth-child(2){animation-delay:.25s}
-.card:nth-child(3){animation-delay:.4s}
-.card:nth-child(4){animation-delay:.55s}
-.card:nth-child(5){animation-delay:.7s}
-
-@keyframes cardIn{
-    to{
-        opacity:1;
-        transform:scale(1);
-    }
+@keyframes pop{
+  from{transform:scale(0.8); opacity:0;}
+  to{transform:scale(1); opacity:1;}
 }
 
-.card:hover{
-    transform:scale(1.06);
-    box-shadow:0 10px 22px rgba(255,140,0,0.5);
-    transition:0.3s ease;
+/* FORM */
+.form-section{
+  display:flex;
+  justify-content:center;
+  padding:40px 10px;
 }
 
-/* ===== FORM ===== */
 .form-box{
-    max-width:500px;
-    margin:40px auto;
-    background:#fff;
-    padding:25px;
-    border-radius:14px;
+  background:#f4f4f4;
+  color:#000;
+  padding:25px;
+  border-radius:12px;
+  width:100%;
+  max-width:420px;
 }
-input,textarea,button{
-    width:100%;
-    padding:12px;
-    margin-bottom:15px;
-    border-radius:8px;
-    border:1px solid #ccc;
-}
-textarea{ resize:none; }
-button{
-    background:#000;
-    color:#fff;
-    border:none;
-    cursor:pointer;
-}
-button:hover{ background:#333; }
 
-/* ===== FOOTER ===== */
+.form-box h2{
+  text-align:center;
+  margin-top:0;
+}
+
+.form-box p{
+  text-align:center;
+  font-size:14px;
+  color:#444;
+}
+
+form input, form textarea{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  box-sizing:border-box;
+  border-radius:6px;
+  border:1px solid #aaa;
+}
+
+form button{
+  width:100%;
+  padding:12px;
+  background:#000;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* FOOTER */
 footer{
-    background:#000;
-    color:#fff;
-    text-align:center;
-    padding:25px 10px;
-}
-footer a{
-    color:#25d366;
-    font-weight:bold;
-    text-decoration:none;
+  background:#000;
+  padding:20px;
+  text-align:center;
 }
 
-/* ===== FLOAT BUTTONS ===== */
-.float-btn{
-    position:fixed;
-    right:18px;
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#fff;
-    font-size:20px;
-    text-decoration:none;
-    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+footer a{
+  display:block;
+  margin:6px 0;
+  text-decoration:none;
+  font-weight:bold;
 }
-.whatsapp{background:#25d366; bottom:80px;}
-.call{background:#25d366; bottom:20px;}
+
+.call{color:#00ff00;}
+.whatsapp{color:#25D366;}
+.email{color:white;}
 </style>
 </head>
 
 <body>
 
 <header>
-    <div class="header-box">
-        <img src="logo.png" class="logo">
-        <div class="company-text">
-            <div class="bhairav">
-                Bha<span class="i-letter">i</span>rav
-            </div>
-            <div class="security">SECURITY SERVICES</div>
-        </div>
-    </div>
+  <h1 class="brand-name">
+    Bha<span class="i-wrap">i<span class="i-dot">•</span></span>rav
+  </h1>
+  <div class="brand-sub">SECURITY SERVICES</div>
 </header>
 
-<section>
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="card">Security Guards</div>
-        <div class="card">Bouncers</div>
-        <div class="card">CCTV Surveillance</div>
-        <div class="card">Residential Security</div>
-        <div class="card">Commercial Security</div>
-    </div>
+<section class="services">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">Security Guards</div>
+    <div class="card">Bouncers</div>
+    <div class="card">Commercial Security</div>
+    <div class="card">CCTV Surveillance</div>
+    <div class="card">Residential Security</div>
+  </div>
 </section>
 
-<section class="form-box">
-    <h2>Enquiry Form</h2>
+<section class="form-section">
+  <div class="form-box">
+    <h2>Send Enquiry</h2>
+    <p>Please describe your security requirement (Guards, Location, Days, Timing)</p>
     <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="tel" placeholder="Mobile Number" required>
-        <input type="email" placeholder="Email ID" required>
-        <textarea placeholder="Please describe your security requirement (guards, location, days etc.)"></textarea>
-        <button>Send Enquiry</button>
+      <input type="text" placeholder="Your Name">
+      <input type="text" placeholder="Mobile Number">
+      <input type="email" placeholder="Email ID">
+      <textarea rows="4" placeholder="Your Requirement"></textarea>
+      <button type="submit">Send Enquiry</button>
     </form>
+  </div>
 </section>
 
 <footer>
-    <p>📞 Call: <a href="tel:7999740789">7999740789</a></p>
-    <p>💬 WhatsApp: <a href="https://wa.me/917722811778">7722811778</a></p>
-    <p>✉️ Email: 24x7infobhairav.s.services@gmail.com</p>
+  <a class="call" href="tel:7999740789">📞 Call: 7999740789</a>
+  <a class="whatsapp" href="https://wa.me/917722817778">💬 WhatsApp: 7722817778</a>
+  <a class="email" href="mailto:bhairavsecurity@email.com">✉ Email Us</a>
 </footer>
-
-<a href="https://wa.me/917722811778" class="float-btn whatsapp">💬</a>
-<a href="tel:7999740789" class="float-btn call">📞</a>
 
 </body>
 </html>
