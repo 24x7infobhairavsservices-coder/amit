@@ -15,11 +15,16 @@ body{
 /* ===== HEADER ===== */
 header{
     background:#000;
-    padding:35px 15px;
-}
-.header-box{
+    padding:25px 15px;
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+/* Logo + Company Name */
+.header-left{
+    display:flex;
     align-items:center;
     gap:18px;
 }
@@ -30,18 +35,60 @@ header{
     background:#fff;
     padding:5px;
 }
-
-/* ===== COMPANY NAME ===== */
 .company-text{
     line-height:1.1;
 }
-.security{
-    margin-top:8px;
-    font-size:20px;
-    font-family: Arial, sans-serif;
+.bhairav-text{
+    font-family: Copperplate, "Copperplate Gothic", serif;
+    font-size:72px;
+    font-weight:700;
+    background: linear-gradient(to bottom,#3a3a3a,#cfcfcf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display:inline-block;
+    position:relative;
+}
+.i-wrap{
+    position:relative; 
+    display:inline-block;
+}
+.i-dot{
+    position:absolute;
+    top:-14px; 
+    left:50%; 
+    transform:translateX(-50%); 
+    width:10px; 
+    height:10px; 
+    background:darkred; 
+    border-radius:50%; 
+    display:inline-block;
+}
+.security-text{
+    margin-top:8px; 
+    font-family: Arial, sans-serif; 
+    font-size:20px; 
     color:#fff;
 }
 
+/* Navigation Menu */
+.nav-menu{
+    display:flex;
+    gap:20px;
+}
+.nav-menu a{
+    text-decoration:none;
+    color:#25d366;
+    font-weight:bold;
+    font-size:16px;
+    padding:8px 12px;
+    border-radius:6px;
+    transition:0.3s;
+}
+.nav-menu a:hover{
+    background:#25d366;
+    color:#000;
+}
+    
 /* ===== SECTIONS ===== */
 section{
     padding:50px 15px;
@@ -165,26 +212,26 @@ footer a{
 
 <body>
 
-<!-- ===== HEADER (Updated) ===== -->
+<!-- ===== HEADER (Updated with Navigation) ===== -->
 <header>
-    <div class="header-box">
+    <div class="header-left">
         <img src="logo.png" class="logo">
         <div class="company-text">
-            <!-- Bhairav in Copperplate with gradient + red dot on i -->
-            <div class="bhairav-text" style="font-family: Copperplate, 'Copperplate Gothic', serif; font-size:72px; font-weight:700; background: linear-gradient(to bottom,#3a3a3a,#cfcfcf); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display:inline-block; position:relative;">
-                Bha<span class="i-wrap" style="position:relative; display:inline-block;">
-                    i<span class="i-dot" style="position:absolute; top:-14px; left:50%; transform:translateX(-50%); width:10px; height:10px; background:darkred; border-radius:50%; display:inline-block;"></span>
-                </span>rav
+            <div class="bhairav-text">
+                Bha<span class="i-wrap">i<span class="i-dot"></span></span>rav
             </div>
-            <!-- Security Services below -->
-            <div class="security-text" style="margin-top:8px; font-family: Arial, sans-serif; font-size:20px; color:#fff;">
-                SECURITY SERVICES
-            </div>
+            <div class="security-text">SECURITY SERVICES</div>
         </div>
     </div>
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#services">Services</a>
+    </nav>
 </header>
 
-<section>
+<section id="services">
     <h2>Our Services</h2>
     <div class="services">
         <div class="card">Security Guards</div>
