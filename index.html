@@ -17,27 +17,8 @@ header{
     background:#000;
     padding:35px 15px;
     position:relative;
-    text-align:center;
 }
-
-/* HOME BUTTON LEFT SIDE */
-.home-btn{
-    position:absolute;
-    left:15px;
-    top:50%;
-    transform:translateY(-50%);
-    background:#25d366;
-    color:#000;
-    padding:8px 14px;
-    border-radius:6px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:14px;
-}
-
-/* HEADER CENTER: LOGO + COMPANY NAME */
-.header-center{
-    display:inline-block;
+.header-box{
     text-align:center;
 }
 .logo{
@@ -48,58 +29,65 @@ header{
     padding:5px;
 }
 
-/* COMPANY NAME */
-.bhairav-text{
+/* ===== COMPANY NAME ===== */
+.company-text{
+    line-height:1.1;
+}
+.bhairav{
     font-family: "Copperplate", "Copperplate Gothic", serif;
     font-size:72px;
     font-weight:700;
-    background: linear-gradient(to bottom,#3a3a3a,#cfcfcf);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background:linear-gradient(to bottom,#3a3a3a,#cfcfcf);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
     display:inline-block;
     position:relative;
 }
-.i-wrap{
-    position:relative; 
+.i-letter{
+    position:relative;
     display:inline-block;
 }
-.i-dot{
+.i-letter::after{
+    content:'';
     position:absolute;
-    top:-14px; 
-    left:50%; 
-    transform:translateX(-50%); 
-    width:10px; 
-    height:10px; 
-    background:darkred; 
-    border-radius:50%; 
-    display:inline-block;
+    top:-14px;
+    left:50%;
+    transform:translateX(-50%);
+    width:10px;
+    height:10px;
+    background:darkred;
+    border-radius:50%;
 }
-.security-text{
-    margin-top:8px; 
-    font-family: Arial, sans-serif; 
-    font-size:20px; 
+.security{
+    margin-top:8px;
+    font-size:20px;
+    font-family: Arial, sans-serif;
     color:#fff;
 }
 
-/* NAVIGATION MENU */
-.nav-menu{
-    margin-top:10px;
-    display:flex;
-    justify-content:center;
-    gap:20px;
+/* ===== MENU ===== */
+nav{
+    margin-top:15px;
 }
-.nav-menu a{
+nav a{
     text-decoration:none;
     color:lightblue;
     font-weight:bold;
     font-size:16px;
-    padding:8px 12px;
-    border-radius:6px;
-    transition:0.3s;
+    margin:0 15px;
 }
-.nav-menu a:hover{
-    background:lightblue;
-    color:#000;
+
+/* ===== HOME BUTTON LEFT ===== */
+.home-btn{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    background:none;
+    color:lightblue;
+    font-weight:bold;
+    text-decoration:none;
+    font-size:16px;
 }
 
 /* ===== SECTIONS ===== */
@@ -230,23 +218,22 @@ footer a{
     <!-- HOME BUTTON LEFT -->
     <a href="index.html" class="home-btn">🏠 Home</a>
 
-    <!-- CENTER LOGO + COMPANY NAME -->
-    <div class="header-center">
+    <!-- CENTER LOGO + COMPANY NAME + MENU -->
+    <div class="header-box">
         <img src="logo.png" class="logo">
         <div class="company-text">
-            <div class="bhairav-text">
-                Bha<span class="i-wrap">i<span class="i-dot"></span></span>rav
-            </div>
-            <div class="security-text">SECURITY SERVICES</div>
+            <div class="bhairav">Bha<span class="i-letter">i</span>rav</div>
+            <div class="security">SECURITY SERVICES</div>
         </div>
-        <!-- NAV MENU -->
-        <nav class="nav-menu">
+        <nav>
+            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="#services">Services</a>
         </nav>
     </div>
 </header>
 
+<!-- ===== SERVICES ===== -->
 <section id="services">
     <h2>Our Services</h2>
     <div class="services">
@@ -258,6 +245,7 @@ footer a{
     </div>
 </section>
 
+<!-- ===== ENQUIRY FORM ===== -->
 <section class="form-section">
     <div class="form-box">
         <h2>Send Enquiry</h2>
@@ -272,6 +260,7 @@ footer a{
     </div>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer>
     <p>📞 Call: <a href="tel:7999740789">7999740789</a></p>
     <p>💬 WhatsApp: <a href="https://wa.me/917722811778">7722811778</a></p>
@@ -279,6 +268,7 @@ footer a{
     <p><a href="about.html">About Us</a></p>
 </footer>
 
+<!-- ===== FLOAT BUTTONS ===== -->
 <a href="https://wa.me/917722811778" class="float-btn whatsapp">💬</a>
 <a href="tel:7999740789" class="float-btn call">📞</a>
 
